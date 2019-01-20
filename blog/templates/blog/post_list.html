@@ -10,14 +10,13 @@
 		</h1>
 	</div>
 	<div>
-		<p>
-		published: 20190119, 17:16
-		</p>
-		<h2><a href="">My first post</a></h2>
-		<p><strong>Today is a good day!</strong></p>
-		<p><em>Today is a good day!</em></p>
+	{%for post in posts%}
+	<div>
+		<p>published: {{post.published_date}}</p>
+		<h2><a href"">{{post.title}}</a></h2>
+		<p>{{post.text|linebreaksbr}}</p>
 	</div>
-	<p>Hi there!</p>
-	<p>It works!</p>
+	{%endfor%}
+	</div>
 </body>
 </html>
