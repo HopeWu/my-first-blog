@@ -1,0 +1,6 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+	<h2>{{user.username}}, welcome!
+	</h2>
+	<a href="{%url 'blog:post_list'%}">Return</a>
+{%endblock%}
